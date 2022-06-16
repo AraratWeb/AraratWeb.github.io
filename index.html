@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Slider 3d Demo</title>
+    <meta name="description" content="Prism is a beautiful Bootstrap 4 template for open-source landing pages." />
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/slider3d.css?v=1.0">
+</head>
+
+<body>
+
+    <!--Header Section-->
+    <section class="bg-gradient pt-5 pb-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mx-auto text-center">
+                    <div class="heading-brand">
+                        Slider3d
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-9 mx-auto text-center">
+
+                    <p class="lead mb-5">Slide3d is a functional slider with several animations powered by WebGL technology</p>
+                    <div id="slider3d_1"></div>
+
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-9 mx-auto">
+                    <div class="code-window">
+                        <div class="dots">
+                            <div class="red"></div>
+                            <div class="orange"></div>
+                            <div class="green"></div>
+                        </div>
+                        <pre class="language-javascript line-numbers"><code class="language-javascript">new Slider3d('slider3d_1', {
+    list: [ 
+          'images/1.jpg',
+          'images/2.jpg',
+          'images/3.jpg',
+          'images/4.jpg',
+          'images/5.jpg',
+          'images/6.jpg',
+          'images/7.jpg',
+          'images/8.jpg',
+          'images/9.jpg'           
+    ],
+
+    textList: [
+          'Easy to set up',
+          'Customizability',
+          'Various Animations',
+          'Responsive Layout',
+          'Powered by WebGL',
+          'Various Animations',
+          'Responsive Layout',
+          'Easy to set up',
+          'Customizability'
+    ],
+
+    animation: 'wave', 
+    height: 600, 
+    time: 4000, 
+    arrows: true, 
+    thumbs: true, 
+    mirror: true 
+});
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h2 class=" ">Other <span class="text-success">Animations</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 mx-auto mb-5">
+                    <h3 class="text-center ">plash</h3>
+                    <div id="slider3d_2"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 mx-auto mb-5">
+                    <h3 class="text-center ">turn</h3>
+                    <div id="slider3d_3"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 mx-auto mb-5">
+                    <h3 class="text-center ">flyaway</h3>
+                    <div id="slider3d_4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h2 class=" ">Options </h2>
+                    <p>
+                        <div class="font-weight-bold">
+                            list
+                        </div>
+                        Array of image urls. Required parameter
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            textList
+                        </div>
+                        Array of text strings. Оptional parameter.<br/> Strings can contain html tags.<br/> The number of lines can be less than or equal to the number of slides.<br/> If you want to leave some slide without a caption in the middle of
+                        the list - just insert an empty line.
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            animation
+                        </div>
+                        Animation name. Оptional parameter - default is plash<br/> Possible values: plash, turn, flyaway, wave
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            width
+                        </div>
+                        Fixed slider width. Оptional parameter.
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            height
+                        </div>
+                        Fixed slider height. Оptional parameter.
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            uicolor
+                        </div>
+                        Interface color(arrows and thumbs). Оptional parameter - default <span style="color: #ffa500">#ffa500</span>
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            arrows
+                        </div>
+                        Show/hide Next and Back buttons. Оptional parameter - default true
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            thumbs
+                        </div>
+                        Show/hide thumbnails. Оptional parameter - default true
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            mirror
+                        </div>
+                        Show/hide reflection in bottom. Оptional parameter - default false
+                    </p>
+
+                    <p>
+                        <div class="font-weight-bold">
+                            callback
+                        </div>
+                        Function called on slide change. Takes the number of the current slide. Оptional parameter.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto mt-5">
+                    <h2 class=" ">Public methods </h2>
+                    <p>You can turn off sliders UI and make your own by using public methods this way:</p>
+                    <div class="code-window">
+                        <div class="dots">
+                            <div class="red"></div>
+                            <div class="orange"></div>
+                            <div class="green"></div>
+                        </div>
+                        <pre class="language-javascript line-numbers"><code class="language-javascript">let slider = new Slider3d('elementid', options);
+slider.next(); //slide next 
+slider.prev(); //slide back 
+slider.setSlide(3); //show slide number 3 (numbering from zero)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--footer-->
+    <footer class="py-5 bg-gradient">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    ararat.web3d@gmail.com
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/slider3d.js"></script>
+    <script>
+        new Slider3d('slider3d_1', {
+            list: [
+                'images/1.jpg',
+                'images/2.jpg',
+                'images/3.jpg',
+                'images/4.jpg',
+                'images/5.jpg',
+                'images/6.jpg',
+                'images/7.jpg',
+                'images/8.jpg',
+                'images/9.jpg'
+
+            ],
+            textList: [
+                'Easy to set up',
+                'Customizability',
+                'Various Animations',
+                'Responsive Layout',
+                'Powered by WebGL',
+                'Various Animations',
+                'Responsive Layout',
+                'Easy to set up',
+                'Customizability',
+
+            ],
+            animation: 'wave',
+            height: 600,
+            time: 4000,
+            arrows: true,
+            thumbs: true,
+            mirror: true
+        });
+
+        new Slider3d('slider3d_2', {
+            list: [
+                'images/1.jpg',
+                'images/2.jpg',
+                'images/3.jpg',
+                'images/4.jpg',
+                'images/5.jpg',
+                'images/6.jpg',
+                'images/7.jpg',
+                'images/8.jpg',
+                'images/9.jpg'
+
+            ],
+
+            animation: 'plash',
+            height: 400,
+            time: 2000,
+            arrows: true,
+            thumbs: true,
+            mirror: false
+        });
+
+        new Slider3d('slider3d_3', {
+            list: [
+
+                'images/5.jpg',
+                'images/6.jpg',
+                'images/7.jpg',
+                'images/8.jpg',
+                'images/9.jpg',
+                'images/1.jpg',
+                'images/2.jpg',
+                'images/3.jpg',
+                'images/4.jpg'
+            ],
+
+            animation: 'turn',
+            height: 400,
+            time: 2000,
+            arrows: true,
+            thumbs: true,
+            mirror: false
+        });
+
+        new Slider3d('slider3d_4', {
+            list: [
+                'images/8.jpg',
+                'images/9.jpg',
+                'images/1.jpg',
+                'images/2.jpg',
+                'images/3.jpg',
+                'images/4.jpg',
+                'images/5.jpg',
+                'images/6.jpg',
+                'images/7.jpg'
+            ],
+
+            animation: 'flyaway',
+            height: 400,
+            time: 2000,
+            arrows: true,
+            thumbs: true,
+            mirror: false
+        });
+    </script>
+
+</body>
+
+</html>
